@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+<script>
+ function loadXMLDoc()
+{
+	var xmlhttp;
+	if (window.XMLHttpRequest)
+	{
+		//  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+		xmlhttp=new XMLHttpRequest();
+	}
+	else
+	{
+		// IE6, IE5 浏览器执行代码
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+            if(xmlhttp.responseText == "登陆成功" )
+             window.alert("登陆成功")
+
+		}
+	}
+	xmlhttp.open("GET","http://127.0.0.1:5000/putup",true);
+	xmlhttp.send();
+}
+
+loadXMLDoc()
+function wrong()
+    {
+        if(document.haha.num.value=="")
+        {
+            console.log("1")
+            window.alert("滚！")
+            document.haha.num.focus()
+            return false
+        }
+
+}
+    </script>
+       <form name="haha" method="post">
+           查询功能序号：<input type="text" name="num">
+           查询目标：<input type="text" name="target">
+           姓名：<input type="text" name="a">
+           性别：<input type="text" name="b">
+           邮箱：<input type="text" name="c">
+           学号：<input type="text" name="d">
+           电话：<input type="text" name="e">
+           <input type="submit" value="查询" onclick= wrong()>
+       </form>
+<script>
+    function jump() {
+        window.location.href="http://127.0.0.1:5000/sign"
+    }
+</script>
+<input type="submit" value ='签到' onclick = jump()>
+<div>邮箱：<h2 id="1"> </h2></div>
+<div >姓名：<h2 id="2"> </h2></div>
+<div >电话：<h2 id="3"> </h2></div>
+<div >性别：<h2 id="4"> </h2></div>
+<div >学号：<h2 id="5"> </h2></div>
+</body>
+</html>

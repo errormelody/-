@@ -1,0 +1,128 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+			padding: 0;
+			margin: 0;
+		}
+		div {
+			display: inline-block;
+			
+		}
+		ul{
+			list-style-type: none;
+		}
+		
+		body{
+		background-image: url("微信图片_20201202221548.jpg");
+		}
+		#beijing {
+			width: 1536px;
+			height: 100px;
+			background-color: #1B87EC;
+			background-image: url("微信图片_20201203104204.jpg")
+		}
+		#beijing2 {
+			width: 1536px;
+			height: 50px;
+			background-color:#00F8CF;
+			background-image: url("微信图片_20201203104738.jpg");	
+		}
+		#neihe {
+			width: 100px;
+		}
+		#neihe2 {
+			height: 70px;
+			font-size:50px;
+			font-weight: 400;
+			color:#FFFFFF;
+			border-top: 20px solid transparent;
+		}
+		
+		#neihe3{
+		float: left;
+		height: 50px;
+		width: 200px;
+	
+		}
+		
+		#neihe4 {
+			float: right;
+			height: 50px;
+			width: 200px;
+			font-weight: 600;
+			font-size: 20px;
+		}
+		#bian {
+			width: 200px;
+			height: 800px;
+		}
+		#weibu {
+			height: 130px;
+			width: 1536px;
+			background-color: #0E9EEE;
+			float: left;
+		}
+		
+		.zhong {
+			float: left
+		}
+		
+		.fuzhu {
+			width: 150px;
+		}
+		
+		.a1 {
+			display: block;
+			width: 200px;
+			height: 50px;
+			border-radius: 5px;
+			text-decoration: none;
+			text-indent: 3em;
+			color:#939393;
+			line-height: 50px;
+			font-weight: 400;
+			font-size: 20px;
+		}
+		
+		.a2{
+			display: block;
+			width: 200px;
+			height: 50px;
+			text-decoration: none;
+			font-weight: 400;
+			font-size: 20px;
+			line-height: 50px;
+			text-indent: 3em;
+			color:#939393;
+			border-radius: 5px;
+		}
+		a:hover {
+			background-color:#A0F8F9
+		;}
+		.list1>li:hover>ul{
+			display: block;
+		}
+		.list2{
+			display: none;
+			background-color:aliceblue;
+			border-radius: 10px;
+		}
+		.wei{
+			display: inline-block;
+			width: 200px;
+			height:100px;
+			font-size: 15px;
+			font-weight: 400;
+			color: aliceblue;
+			line-height: 15px;
+			border-right: 3px solid;
+		}
+		.kuang {
+			border:  5px #FFFFFF solid;
+			margin: 5px;
+			background-color: aqua;
+			height: 200px;
+			width: 300px;
+			border-radius: 5px;
+		}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function loadXMLDoc2()
+{
+	var xmlhttp;
+	if (window.XMLHttpRequest)
+	{
+		//  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+		xmlhttp=new XMLHttpRequest();
+	}
+	else
+	{
+		// IE6, IE5 浏览器执行代码
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+            str = xmlhttp.responseText
+            Q = str.split(",")
+            W = Q[0].split(":")
+            E = W[1].split('"')
+            console.log(str)
+            document.getElementById("5").innerHTML = E[1]
+
+            Q = str.split(",")
+            W = Q[1].split(":")
+            E = W[1].split('"')
+            console.log(str)
+            document.getElementById("4").innerHTML = E[1]
+		}
+	}
+	xmlhttp.open("GET","http://127.0.0.1:5000/putup2",true);
+	xmlhttp.send();
+
+
+
+}
+loadXMLDoc2()
+</script>
+<form method="post">
+           是否已到：<input type="text" name="num">
+    缺到理由：<textarea  type ="text" cols="40" rows="40" name="reason"></textarea>
+    回来时间：<input type="text" name="backdate">
+           <input type="submit" value="提交">
+</form>
+<div>是否已到：<h2 id="1"> </h2></div>
+<div >签到时间：<h2 id="3"> </h2></div>
+<div >理由：<h2 id="4"> </h2></div>
+<div >回来时间：<h2 id="5"> </h2></div>
+</body>
+</html>

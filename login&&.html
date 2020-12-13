@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>登录</title>
+	<style>
+		body {
+    background-image: url("static/微信图片_20201211161502.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+ 
+#login_frame {
+    width: 400px;
+    height: 300px;
+    padding: 13px;
+ 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -200px;
+ 
+    background-color: rgba(240, 255, 255, 0.5);
+ 
+    border-radius: 10px;
+    text-align: center;
+}
+ 
+form p > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+ 
+#image_logo {
+    margin-top: 22px;
+}
+ 
+.label_input {
+    font-size: 14px;
+    font-family: 宋体;
+ 
+    width: 65px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+ 
+    color: white;
+    background-color: #3CD8FF;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+ 
+.text_field {
+    width: 278px;
+    height: 28px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 0;
+}
+ 
+#btn_login {
+    font-size: 14px;
+    font-family: 宋体;
+ 
+    width: 120px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+ 
+    color: white;
+    background-color: #3BD9FF;
+    border-radius: 6px;
+    border: 0;
+ 
+    float: left;
+}
+ 
+#forget_pwd {
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    float: right;
+    top: 5px;
+ 
+}
+ 
+#forget_pwd:hover {
+    color: blue;
+    text-decoration: underline;
+}
+ 
+#login_control {
+    padding: 0 28px;
+}
+	</style>
+	
+	<script>
+	function login() {
+
+        var username = document.getElementById("user");
+        var pass = document.getElementById("password");
+
+        if (username.value == "") {
+
+            alert("请输入用户名");
+
+        }
+        if (pass.value == "") {
+
+            alert("请输入密码");
+
+        }
+    }
+	</script>
+</head>
+
+<body>
+
+	<div id="login_frame">
+
+    <p id="image_logo"><img src="static/微信图片_20201211161457.jpg" width="90"></p>
+ 
+    <form method="post" >
+		<abc>学生信息管理系统</abc>
+ 
+      <p><label class="label_input">用户名</label><input type="text" id="user" name="user" class="text_field"/></p>
+      <p><label class="label_input">密码</label><input type="password" id="password" name="password" class="text_field"/></p>
+
+        <div id="login_control">
+            <input type="submit" id="btn_login" value="登录" onclick="login()">
+            
+        </div>
+    </form>
+</div>
+</body>
+</html>

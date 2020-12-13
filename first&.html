@@ -1,0 +1,418 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>信息操作</title>
+	<style>
+        *{
+			padding: 0;
+			margin: 0;
+		}
+		div {
+			display: inline-block;
+
+		}
+		ul{
+			list-style-type: none;
+		}
+
+		body{
+		background-image: url("static/c6442a70ddcf92d5292d766f10a0c1b.jpg");
+		}
+		#beijing {
+			width: 1536px;
+			height: 100px;
+			background-color: #1B87EC;
+			background-image: url("static/6996e67a62b3a6d75c534d6ef0ae26e.jpg")
+		}
+		#beijing2 {
+			width: 1536px;
+			height: 50px;
+			background-color:#00F8CF;
+			background-image: url("static/bd809e8a0c159959f6f310b038674f8.jpg");
+		}
+		#neihe {
+			width: 100px;
+		}
+		#neihe2 {
+			height: 70px;
+			font-size:50px;
+			font-weight: 400;
+			color:#FFFFFF;
+			border-top: 20px solid transparent;
+		}
+
+		#neihe3{
+		float: left;
+		height: 50px;
+		width: 200px;
+
+		}
+
+		#neihe4 {
+			float: right;
+			height: 50px;
+			width: 200px;
+			font-weight: 600;
+			font-size: 20px;
+		}
+		#bian {
+			width: 200px;
+			height: 800px;
+		}
+		#weibu {
+			height: 130px;
+			width: 1536px;
+			background-color: #0E9EEE;
+			float: left;
+		}
+
+		.zhong {
+			float: left
+		}
+
+		.fuzhu {
+			width: 150px;
+		}
+
+		.a1 {
+			display: block;
+			width: 200px;
+			height: 50px;
+			border-radius: 5px;
+			text-decoration: none;
+			text-indent: 3em;
+			color:#939393;
+			line-height: 50px;
+			font-weight: 400;
+			font-size: 20px;
+		}
+
+		.a2{
+			display: block;
+			width: 200px;
+			height: 50px;
+			text-decoration: none;
+			font-weight: 400;
+			font-size: 20px;
+			line-height: 50px;
+			text-indent: 3em;
+			color:#939393;
+			border-radius: 5px;
+		}
+		a:hover {
+			background-color:#A0F8F9
+		;}
+		.list1>li:hover>ul{
+			display: block;
+		}
+		.list2{
+			display: none;
+			background-color:aliceblue;
+			border-radius: 10px;
+		}
+		.wei{
+			display: inline-block;
+			width: 200px;
+			height:100px;
+			font-size: 15px;
+			font-weight: 400;
+			color: aliceblue;
+			line-height: 15px;
+			border-right: 3px solid;
+		}
+		.kuang {
+			border:  5px #FFFFFF solid;
+			margin: 5px;
+			background-color: aqua;
+			height: 200px;
+			width: 300px;
+			border-radius: 5px;
+		}
+		
+        td {
+			width: 100px;
+			height: 20px;
+		    text-align: center;
+			
+		}
+		
+		
+		.biao{
+			font-weight: 600;
+			font-size: 25px;
+			text-align: center;
+			
+		}
+		
+		.biao2{
+			line-height: 40px;
+			
+		}
+		
+		.he{
+			padding-left: 130px;
+		}
+		
+	</style>
+</head>
+
+<body>
+<script>
+function loadXMLDoc2()
+{
+	var xmlhttp;
+	if (window.XMLHttpRequest)
+	{
+		//  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+		xmlhttp=new XMLHttpRequest();
+	}
+	else
+	{
+		// IE6, IE5 浏览器执行代码
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+
+            str = xmlhttp.responseText;
+            n = str.split(",")
+            answer1 = n[0].split(":")
+            answer2 = answer1[1].split('"')
+           document.getElementById("1").innerHTML=answer2[1]
+
+            answer1 = n[1].split(":")
+            answer2 = answer1[1].split('"')
+           document.getElementById("2").innerHTML= answer2[1]
+
+            answer1 = n[2].split(":")
+            answer2 = answer1[1].split('"')
+           document.getElementById("3").innerHTML= answer2[1]
+
+            answer1 = n[3].split(":")
+            answer2 = answer1[1].split('"')
+           document.getElementById("4").innerHTML= answer2[1]
+
+            answer1 = n[4].split(":")
+            answer2 = answer1[1].split('"')
+           document.getElementById("5").innerHTML= answer2[1]
+
+
+		}
+	}
+	xmlhttp.open("GET","http://127.0.0.1:5000/putup2",true);
+	xmlhttp.send();
+
+}
+function wrong()
+    {
+        if(document.haha.num.value=="")
+        {
+            console.log("1")
+            window.alert("滚！")
+            document.haha.num.focus()
+            return false
+        }
+
+}
+loadXMLDoc2()
+    </script>
+	<div id="beijing">
+		<div id="neihe"></div>
+		<div id="neihe2">学生信息管理系统</div>
+	</div>
+	
+	<div id="beijing2">
+		<div id="neihe3">
+		<ul class="list1">
+		<li>
+	<a class="a1" href=http://127.0.0.1:5000/first>信息处理</a>
+	<ul class="list2">
+		<li><a class="a1" href="http://127.0.0.1:5000/main">主界面</a></li>
+	<li><a class="a1" href="学生信息导入.html">信息录入</a></li>
+	<li><a class="a1" href="信息操作.html">信息操作</a></li>
+	<li><a class="a1" href="宿舍情况.html">宿舍情况</a></li>
+	<li><a class="a1" href="宿舍管理.html">宿舍管理</a></li>
+		</ul>
+			</li>
+	</ul></div>
+		<script>
+    function jump() {
+        window.location.href="http://127.0.0.1:5000/sign"
+    }
+</script>
+		<div style=" height: 50px; ">
+			<a class="a2">教学在线</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+		<div style=" height: 50px; ">
+			<a class="a2">教师发展</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+		<div style=" height: 50px; ">
+			<a class="a2">迎新系统</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+		<div style=" height: 50px; ">
+			<a class="a2">离校系统</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+		<div style=" height: 50px; ">
+			<a class="a2">个人设置</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+		<div style=" height: 50px; ">
+			<a class="a2" onclick = jump()>人员签到</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+	<div id="neihe4">
+		<a class="a2">&nbsp;&nbsp;&nbsp;退出</a></div>
+	</div>
+	<br />
+	<div></div>
+<p style="font-size: 20px;text-indent: 11em; width: 1536px;">
+	<form method="post">
+	操作:
+	<select style="height: 25px;" name="num">
+		<option value="3">删除 </option>
+		<option value="4">修改</option>
+		<option value="1">查询</option>
+		<option value="2">增加</option>
+		</select>
+	查询目标：<input type="text" style="width: 80px;" name="target">
+	学生姓名：<input type="text" style="width: 80px;" name="a">&nbsp;
+	性别：<select style="height: 25px;" name="b">
+		<option value="man">男</option>
+		<option value="woman">女</option>
+		</select>
+	年级: <select style=" height: 25px">
+	<option>大一</option>
+	<option>大二</option>
+	<option>大三</option>
+	<option>大四</option>
+	</select>
+		邮箱: <input type="text" name="c">
+	学号: &nbsp;<input type="text" name="d">&nbsp;
+	电话: &nbsp;<input type="text"name="e">&nbsp;
+	<input type="submit" value="执行" style=" height: 30px ; width: 70px; font-size: 16px; font-weight: 600; border: none;border-radius: 8px; color: aliceblue ;background-color: #0B70EE" onclick="wrong()">
+		</form>
+	</p>
+	<p style="font-size: 20px; text-indent: 12em;"></p>
+<br />
+	
+<div class="he" style="margin-left: 100px;">
+	<table border="1" cellpadding="20px" cellspacing="0px">
+	<tr>
+		<td class="biao" >序号</td>
+		<td class="biao" style="width:100px">姓名</td>
+		<td class="biao">性别</td>
+		<td class="biao" style="width:120px">年级</td>
+		<td class="biao" style="width:180px">学号</td>
+		<td class="biao" style="width:200px">邮箱</td>
+		<td class="biao" style="width:180px">手机</td>
+	  </tr>
+	<tr>
+		<td class="biao2">001</td>
+		<td id="1"></td>
+		<td id="2"></td>
+		<td></td>
+		<td id="4"></td>
+		<td id="3"></td>
+		<td id="5"></td>
+	  </tr>
+	<tr>
+		<td class="biao2">002</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+
+	  </tr>
+	<tr>
+		<td class="biao2">003</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	  </tr>
+	<tr>
+		<td class="biao2">004</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	  </tr>
+	<tr>
+		<td class="biao2">005</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	  </tr>
+	<tr>
+		<td class="biao2">006</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	  </tr>
+	<tr>
+		<td class="biao2">007</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	  </tr>
+	<tr>
+		<td class="biao2">008</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	  </tr>
+	<tr>
+		<td class="biao2">009</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	  </tr>
+	<tr>
+		<td class="biao2">010</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	  </tr>
+	</table>
+	</div>
+	<br />
+<div>
+	<div style="width: 850px;height: 20px; " ></div>
+	<a href="*" style="text-decoration: none;color:aliceblue;margin: 5px;">首页</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="*" style="text-decoration: none;color:aliceblue">上一页</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="*" style="text-decoration: none;color:aliceblue">下一页</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="*" style="text-decoration: none;color:aliceblue">末页</a>
+	</div>
+
+	<p>s</p>
+
+	<div id="weibu">
+	<div class="wei"><div style="height: 29px;"></div><a class="a2" style="color: aliceblue;">关于我们</a></div>
+	<div class="wei"><div style="height: 29px;"></div><a class="a2" style="color: aliceblue; ">办事指南</a></div>
+	<div class="wei"><div style="height: 29px;"></div><a class="a2" style="color: aliceblue; ">管理制度</a></div>
+	<div class="wei"><div style="height: 29px;"></div><a class="a2" style="color: aliceblue; ">教学数据</a></div>
+	<div class="wei"><div style="height: 29px;"></div><a class="a2" style="color: aliceblue; ">信息公开</a></div>
+	<div class="wei"><div style="height: 29px;"></div><a class="a2" style="color: aliceblue; ">留学咨询</a></div>
+</div>
+
+</body>
+</html>
