@@ -21,6 +21,7 @@ function sumbit() {
     var profession = document.getElementById('profession1').value;
     var grade = document.getElementById('grade1').value;
     var stuClass = document.getElementById('stuClass1').value;
+    var age = document.getElementById('age1').value;
     var nums = iTable.rows.length;
 
     // 创建一行tr
@@ -68,17 +69,23 @@ function sumbit() {
     var iTd8 = document.createElement('td');
     iTd8.className = "col8";
     iTd8.appendChild(document.createTextNode(stuClass));
-    
     var iTd9 = document.createElement('td');
     iTd9.className = "col9";
-    
+    iTd9.appendChild(document.createTextNode(age));
+    var iTd10 = document.createElement('td');
+    iTd10.className = "col10";
+    var examine = document.createElement('input');
+    examine.id = 'examine';
+    examine.setAttribute('type','button');
+    examine.setAttribute('value','查看');
+    examine.setAttribute('onclick','examine(this)');
     var update = document.createElement('input');
     update.id = 'update';
     update.setAttribute('type','button');
     update.setAttribute('value','修改');
     update.setAttribute('onclick','update(this)');
-
-    iTd9.appendChild(update);
+    iTd10.appendChild(examine);
+    iTd10.appendChild(update);
 
     // 将单元格添加到行
     iTr.appendChild(iTd1);
@@ -99,7 +106,7 @@ function sumbit() {
     document.getElementById('profession1').value = null;
     document.getElementById('grade1').value = null;
     document.getElementById('stuClass1').value = null;
-    
+    document.getElementById('age1').value = null;
 
     document.getElementById('nums').innerText = nums;
 
