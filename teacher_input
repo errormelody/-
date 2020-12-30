@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>教师端学生个人信息导入</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+	<style>
+		p{
+			font-size: 14px;
+		}
+		th{
+			font-size: 12px;
+		}
+		td{
+			font-size: 12px;
+		}
+	</style>	
+</head>
+
+<body>
+	<h3 align="center">欢迎进入学生信息管理系统教师端操作页面</h3>
+	<p align="center">学生个人信息导入：可一次性填写不多于十位同学的信息</p>
+	<table width=600 align="center" border=1 cellspacing="0" cellpadding="">
+		   <tr>
+			  <th>序号</th>
+			   <th>姓名</th>
+			   <th>性别</th>
+			   <th>年级</th>
+			   <th>学号</th>
+			   <th>学院</th>
+			   <th>专业</th>
+			</tr>
+		   <tr>
+			   <td align="center">001</td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			</tr>
+		<tr>
+			   <td align="center">002</td>
+			<td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			</tr>
+		<tr>
+			   <td align="center">003</td>
+			<td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			</tr>
+		<tr>
+			   <td align="center">004</td>
+			<td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			</tr>
+		<tr>
+			   <td align="center">005</td>
+			<td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			</tr>
+		<tr>
+			   <td align="center">006</td>
+			<td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			</tr>
+		<tr>
+			   <td align="center">007</td>
+			<td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			</tr>
+		<tr>
+			   <td align="center">008</td>
+			<td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			</tr>
+		<tr>
+			   <td align="center">009</td>
+			<td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			</tr>
+		<tr>
+			   <td align="center">010</td>
+			<td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			   <td align="center"><input type="text"></td>
+			</tr>
+	</table>
+</body>
+</html>
