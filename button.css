@@ -15,6 +15,25 @@
     border: 1px solid black;
     margin-left: 5px;
 }
+#previous     /*上一页*/
+{
+    height: 30px;
+    width: 75px;
+    background-color: #5cb85c;
+    color: white;
+    border: 1px solid black;
+    float: right;
+}
+#next     /*下一页*/
+{
+    height: 30px;
+    width: 75px;
+    background-color: #d9534f;
+    color: white;
+    border: 1px solid black;
+    margin-left: 5px;
+    float: right;
+}
 
 #update     /*修改*/
 {
@@ -25,6 +44,7 @@
     background: none;
     /*background-color: #eef1f8;*/
 }
+
 #submit     /*提交*/
 {
     height: 30px;
@@ -42,6 +62,7 @@
     border: 1px solid #dadee1;
     margin-left: 5px;
 }
+
 #preservation     /*保存*/
 {
     height: 30px;
@@ -50,6 +71,7 @@
     color: black;
     border: 1px solid #dadee1;
 }
+
 #updateCancel     /*修改中的取消*/
 {
     height: 30px;
